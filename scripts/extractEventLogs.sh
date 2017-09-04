@@ -36,13 +36,6 @@ fi
 
 
 
-# Simple demo api call that will always work
-curl $instance_url/services/data/v39.0/query?q=SELECT+Id+,+Name+FROM+Account+LIMIT+100  \
- -H "Authorization: Bearer $access_token" \
- -H 'Content-Type: application/json' \
- -H "X-PrettyPrint:1" \
- -o ./accounts.csv
-
 # This call lists Event log records
  curl $instance_url/services/data/v39.0/query?q=SELECT+Id,+EventType,+LogFile,+LogDate+From+EventLogFile \
  -H "Authorization: Bearer $access_token" \
